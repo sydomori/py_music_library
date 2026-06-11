@@ -14,5 +14,6 @@ class artist:
         if album not in self.albums:
             self.albums.append(album)
 
-            
+    def get_discography(self)
+                
    
