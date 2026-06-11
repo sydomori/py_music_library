@@ -35,4 +35,13 @@ class Person:
             raise ValueError("Invalid email address.")
         self._email = value.strip()
 
+    # dict to read current value using getters and prepare data for json
+    def to_dict(self) -> dict:
+        return {
+            "id": self.id,
+            "name": self.name,
+            "email": self.email
+        }
         
+
+
