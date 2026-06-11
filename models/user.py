@@ -7,7 +7,7 @@ class User(Person):
         self.favourite_songs = []
         self.favourite_albums = []
 
-    def add_favourite_song(self, song, _quiet=False):
-        
+def add_favourite_song(self,song, _quiet=False):
+            
 
         
