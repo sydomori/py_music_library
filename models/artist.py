@@ -6,5 +6,6 @@ class artist:
         self.songs =[]
         self.albums =[]
 
-    def add    
+    def add_song(self, song):
+          
        
