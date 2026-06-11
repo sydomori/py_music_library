@@ -33,5 +33,27 @@ class User(Person):
     def favourite_albums(self) -> List[str]:
         return self._favourite_albums
     
+    # methods to add/remove playlists and favorite songs
+    def add_playlist(self, playlist: str) -> None:
+        self._playlists.append(playlist)
+        
+    def get_playlist_by_name(self, name: str) -> str:
+        for playlist in self._playlists:
+            if playlist.name.lower() == name.lower():
+                return playlist
+        return None
+
+    # method to add a song to favorites
+    def add_favorite(self, song: str) -> None:
+        if song not in self._favorite_songs:
+            self._favorite_songs.append(song)
+
+    def remove_favorite(self, song: str) -> bool:
+        if song in self._favorite_songs:
+            self._favorite_songs.remove(song)
+            return True
+        return False
     
+    #class method to get all users
+    @classmethod
 
