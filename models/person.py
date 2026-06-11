@@ -21,3 +21,18 @@ class Person:
     @property
     def email(self)str:
         return self._email
+
+    # setters-- validate data before setting it
+    @name.setter
+    def name(self, value:str):
+        if not value or not value.strip():
+            raise ValueError("Name cannot be empty.")
+        self._name = value.strip()
+
+    @email.setter
+    def email(self, value:str):
+        if "@" not in value:
+            raise ValueError("Invalid email address.")
+        self._email = value.strip()
+
+        
