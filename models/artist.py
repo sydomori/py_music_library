@@ -22,9 +22,18 @@ class Artist(Person):
     
     # properties
     @property
-    def albums(self) -> List[str]:
-        return self._albums
+    def genre(self) -> str:
+        return self._genre
+    
+    @property
+    def country(self) -> str:
+        return self._country 
 
-    def add_album(self, album: str) -> None:
-        self._albums.append(album)
+    @property
+    def formed_year(self) -> int:
+        return self._formed_year
+
+    @property
+    def albums(self) -> List[str]:
+        return self._albums   
     
