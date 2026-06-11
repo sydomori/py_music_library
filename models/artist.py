@@ -28,7 +28,12 @@ class artist:
         if not self.albums and not self.songs:
             print("  No songs or albums added yet.")
 
-    def to_dict(self):        
+    def to_dict(self):
+        return{
+            "artist_id": self.artist_id,
+            "name": self.name,
+            "genre": self.genre,
+        }        
 
 
                 
