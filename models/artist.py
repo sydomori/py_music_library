@@ -14,6 +14,22 @@ class artist:
         if album not in self.albums:
             self.albums.append(album)
 
-    def get_discography(self)
+    def get_discography(self):
+        print(f" {self.name} — Discography")
+        print(f"  Genre: {self.genre}")
+        if self.albums:
+            print(f"  Albums ({len(self.albums)}):")
+            for album in self.albums:
+                print(f"    • {album.title} ({album.release_year})")
+        if self.songs:
+            print(f"  Songs ({len(self.songs)}):")
+            for song in self.songs:
+                print(f"    • {song.title}")
+        if not self.albums and not self.songs:
+            print("  No songs or albums added yet.")
+
+    def         
+
+
                 
    
