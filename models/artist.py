@@ -33,7 +33,9 @@ class artist:
             "artist_id": self.artist_id,
             "name": self.name,
             "genre": self.genre,
-        }        
+        }
+    def __str__(self):
+        return f"{self.name} [{self.genre}] (ID: {self.artist_id})"        
 
 
                 
