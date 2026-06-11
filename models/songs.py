@@ -18,10 +18,11 @@ class Song:
             "duration":self.duration
 
         }
-    def add_to_album(self,album):
+    def add_to_album(self, album):
         if album not in self.albums:
             self.albums.append(album)
+        if self not in album.songs:
             album.add_song(self)
 
     def __repr__(self):
-        return f"Song: {self.title} by {self.artist}, in genre: {self.genre} ,duration:{self.duration}"
+        return f"Song: {self.title} by {self.artist}, in genre: {self.genre} ,duration:{self.duration }"
