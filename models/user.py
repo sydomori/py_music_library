@@ -8,6 +8,7 @@ class User(Person):
         self.favourite_albums = []
 
 def add_favourite_song(self,song, _quiet=False):
-            
+    already =any(fs.song.song_id == song.song_id for fs in self.favourite_songs)
+
 
         
