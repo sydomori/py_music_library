@@ -2,10 +2,8 @@
 artist inherits from person
 artist -> albums
 """
-from typing import List
 
 from models.person import Person
-
 class Artist(Person):
     """
     an artist is a person who creates music. inherits name and email from person.
