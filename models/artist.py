@@ -7,5 +7,7 @@ class artist:
         self.albums =[]
 
     def add_song(self, song):
-          
+        if song not in self.songs:
+            self.songs.append(song)
+
        
