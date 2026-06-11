@@ -9,7 +9,7 @@ class Person:
         self.id = person._id_counter
         self.name = name
         self.email = email 
-    #@property--lets you read name safely
+    #property--lets you  access the value like atrribute
     @property
     def id(self)int:
         return self._id
@@ -35,7 +35,6 @@ class Person:
             raise ValueError("Invalid email address.")
         self._email = value.strip()
 
-    # dict to read current value using getters and prepare data for json
     def to_dict(self) -> dict:
         return {
             "id": self.id,
