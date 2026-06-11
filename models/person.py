@@ -47,6 +47,4 @@ class Person:
         return f"Person(id={self.id}, name='{self.name}', email='{self.email}')"
 
     def __repr__(self) -> str:
-        return self.__str__()        
-
-
+        return self.__str__()
