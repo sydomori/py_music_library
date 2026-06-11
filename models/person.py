@@ -9,4 +9,15 @@ class Person:
         self.id = person._id_counter
         self.name = name
         self.email = email 
+    #@property--lets you read name safely
+    @property
+    def id(self)int:
+        return self._id
 
+    @property
+    def name(self)str:
+        return self._name    
+
+    @property
+    def email(self)str:
+        return self._email
