@@ -1,5 +1,4 @@
-from models.person import Person
-class User(Person):
+class user():
     """
     Extends Person. Represents a library user.
     - has many FavoriteSongs (via FavoriteSong junction)
