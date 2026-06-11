@@ -10,4 +10,9 @@ class artist:
         if song not in self.songs:
             self.songs.append(song)
 
-       
+    def add_album(self, album):
+        if album not in self.albums:
+            self.albums.append(album)
+
+            
+   
