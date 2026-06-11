@@ -9,7 +9,8 @@ class Album:
     def add_song(self, song):
         if song not in self.songs:
             self.songs.append(song)
-            song.add_to_album(self)
+            if self not in song.albums:
+                song.add_to_album(self)
 
     def list_songs(self):
         return [str(song) for song in self.songs]
