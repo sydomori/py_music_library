@@ -35,5 +35,34 @@ class Artist(Person):
 
     @property
     def albums(self) -> List[str]:
-        return self._albums   
+        return self._albums 
+
+    def add_album(self, album: str) -> None:
+        self._albums.append(album)
+
+    def get_album_by_name(self, name: str) -> str:
+        for album in self._albums:
+            if album.name.lower() == name.lower():
+                return album
+        return None
+
+    def total_songs(self) -> int:
+        return sum(
+            len(album.songs) for album in self._albums
+        )
+    def total_plays(self) -> int:
+        return sum(
+            song.play_count
+            for album in self._albums
+            for song in album.songs
+        )
+    #.setters
+    @genre.setter
+    def genre(self, value: str):
+        self._genre = value.strip()
+
+    @classmethod
+    
+
+
     
