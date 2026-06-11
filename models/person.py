@@ -42,6 +42,11 @@ class Person:
             "name": self.name,
             "email": self.email
         }
-        
+    # string representation for debugging _str__ method and _repr__ method
+    def __str__(self) -> str:
+        return f"Person(id={self.id}, name='{self.name}', email='{self.email}')"
+
+    def __repr__(self) -> str:
+        return self.__str__()        
 
 
