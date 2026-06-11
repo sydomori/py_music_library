@@ -28,7 +28,7 @@ class artist:
         if not self.albums and not self.songs:
             print("  No songs or albums added yet.")
 
-    def         
+    def to_dict(self):        
 
 
                 
