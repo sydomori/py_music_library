@@ -52,6 +52,25 @@ class User(Person):
     @property
     def favorite_albums(self):
         return self._favorite_albums
+    
+
+
+    #display
+    def view_favorites(self):
+        print(f"\n{self.name}'s Favorite Songs:")
+        if self._favorite_songs:
+            for song in self._favorite_songs:
+                print(f"- {song.title} by {song.artist}")
+        else:
+            print("No favorite songs added.")
+
+        print(f"\n{self.name}'s Favorite Albums:")
+        if self._favorite_albums:
+            for album in self._favorite_albums:
+                print(f"- {album.title} by {album.artist}")
+        else:
+            print("No favorite albums added.")
+
         
 
 
