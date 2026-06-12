@@ -39,6 +39,21 @@ class User(Person):
         self._favorite_albums.append(album)
         print(f"{album.title} added to {self.name}'s favorite albums.")
 
+
+     #remove favorite albums
+    def remove_favorite_album(self,album):
+        if album not in self._favorite_albums:
+            print(f"{album.title} is not in {self.name}'s favorite albums.")
+            return
+        self._favorite_albums.remove(album)
+        print(f"{album.title} removed from {self.name}'s favorite albums.")
+
+
+
+
+
+        
+
        
 
 
