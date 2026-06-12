@@ -85,6 +85,10 @@ class artist:
     def __str__(self):
         return f"{self._name}"
     
+    def __repr__(self):
+        return f"Artist('{self._name}', '{self._genre}')"
+
+    
     
     
 
