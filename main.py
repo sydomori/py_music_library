@@ -54,4 +54,15 @@ def main():
         "list songs",
         help = "list all songs",
     )
+    
+    #album commands
+    subparsers.add_parser(
+        "add album",
+        help = "create a new album",
+    )
 
+    subparsers.add_parser(
+        "list albums",
+        help = "list all albums",
+    )
+    
