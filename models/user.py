@@ -49,6 +49,12 @@ class User(Person):
         print(f"{album.title} removed from {self.name}'s favorite albums.")
 
 
+    @property
+    def favorite_albums(self):
+        return self._favorite_albums
+        
+
+
 
 
 
