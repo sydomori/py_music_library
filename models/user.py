@@ -1,0 +1,116 @@
+from models.person import Person
+
+class User(Person):
+    #store all users
+    all_users = []
+
+    def __init__(self,name,email):
+        super().__init__(name,email)
+        self._favorite_songs = []
+        self._favorite_albums = []
+        User.all_users.append(self)
+
+    # add favorite songs
+    def add_favorite_song(self, song):
+        if song in self._favorite_songs:
+            print(f"{song.title} is already in {self.name}'s favorite songs.")
+            return
+        self._favorite_songs.append(song)
+        print(f"{song.title} added to {self.name}'s favorite songs.")
+
+    # remove favorite songs
+    def remove_favorite_song(self, song):
+        if song not in self._favorite_songs:
+            print(f"{song.title} is not in {self.name}'s favorite songs.")
+            return
+        self._favorite_songs.remove(song)
+        print(f"{song.title} removed from {self.name}'s favorite songs.")
+
+
+    @property
+    def favorite_songs(self):
+        return self._favorite_songs
+    
+#add favorite albums
+    def add_favorite_album(self,album):
+        if album in self._favorite_albums:
+            print(f"{album.title} is already in {self.name}'s favorite albums.")
+            return
+        self._favorite_albums.append(album)
+        print(f"{album.title} added to {self.name}'s favorite albums.")
+
+
+     #remove favorite albums
+    def remove_favorite_album(self,album):
+        if album not in self._favorite_albums:
+            print(f"{album.title} is not in {self.name}'s favorite albums.")
+            return
+        self._favorite_albums.remove(album)
+        print(f"{album.title} removed from {self.name}'s favorite albums.")
+
+
+    @property
+    def favorite_albums(self):
+        return self._favorite_albums
+    
+
+
+    #display
+    def view_favorites(self):
+        print(f"\n{self.name}'s Favorite Songs:")
+        if self._favorite_songs:
+            for song in self._favorite_songs:
+                print(f"- {song.title} by {song.artist}")
+        else:
+            print("No favorite songs added.")
+
+        print(f"\n{self.name}'s Favorite Albums:")
+        if self._favorite_albums:
+            for album in self._favorite_albums:
+                print(f"- {album.title} by {album.artist}")
+        else:
+            print("No favorite albums added.")
+
+
+
+    @classmethod
+    def find_by_name(cls,name):
+        for user in cls.all_users:
+            if user.name.lower() == name.lower():
+                return user
+        return None 
+
+
+    def to_dict(self):
+        return {
+            "name": self._name,
+            "email": self._email,
+            "favorite_songs": [song.to_dict() for song in self._favorite_songs],
+            "favorite_albums": [album.to_dict() for album in self._favorite_albums]
+        } 
+
+
+
+def __str__(self):
+        return f"User: {self._name}, Email: {self._email}"
+            
+
+
+            
+
+        
+
+
+
+
+
+        
+
+       
+
+
+
+
+
+
+
