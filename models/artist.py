@@ -33,6 +33,12 @@ class artist:
     def albums(self):
         return self._albums
     
+    def add_song(self,song):
+        if song not in self._songs:
+            self._songs.append(song)
+        else:
+            print(f"{song.title} is already in {self.name}'s songs.")
+     
     
 
     
