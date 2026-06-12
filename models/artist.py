@@ -74,6 +74,15 @@ class artist:
             if artist.name.lower() == name.lower():
                 return artist
         return None
+     
+    #data
+    def to_dict(self):      
+        return {
+            "name": self._name,
+            "genre": self._genre,
+        }
+    
+
 
            
         
