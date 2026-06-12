@@ -98,10 +98,42 @@ def main():
         "search",
         help="Search by artist or genre"
     )
-    
+
     search_parser.add_argument(
         "--by",
         choices=["artist", "genre"],
         required=True,
         help="Search by artist or genre"
     )
+
+    args = parser.parse_args()
+
+    if args.command == "add-artist":
+        create_artist()
+    elif args.command == "list-artists":
+        list_all_artists()
+    elif args.command == "add-song":
+        create_song()
+    elif args.command == "list-songs":
+        list_all_songs()
+    elif args.command == "add-album":
+        create_album()
+    elif args.command == "list-albums":
+        list_all_albums()
+    elif args.command == "add-user":
+        create_user()
+    elif args.command == "list-users":
+        list_all_users()
+    elif args.command == "favorite-song":
+        add_favorite_song()
+    elif args.command == "favorite-album":
+        add_favorite_album()
+    elif args.command == "view-favorites":
+        view_favorites()
+    elif args.command == "search":
+        if args.by == "artist":
+            search_by_artist()
+        elif args.by == "genre":
+            search_by_genre()
+    else:
+        parser.print_help()
