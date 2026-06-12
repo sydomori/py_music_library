@@ -27,3 +27,8 @@ def main():
         prog = "Music Library",
         description="manage your music from the command line"
     )
+
+    subparsers = parser.add_subparsers(
+        dest = "command",
+        help = "available commands"
+    )
