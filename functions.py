@@ -132,8 +132,6 @@ def view_favorites():
     user_name = input("Enter user name: ")
     user = User.find_by_name(user_name)
     if user:
-        print(f"\nFavorites for {user_name}:")
-        for favorite in user.favorites:
-            print(favorite)
+        user.view_favorites()
     else:
         print(f"User '{user_name}' not found")
