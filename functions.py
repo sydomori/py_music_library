@@ -24,3 +24,10 @@ def create_song():
     else:
         print("Artist '{artist_name}' not found")
 
+def list_all_songs():
+    songs = Song.read_all()
+    if songs:
+        for song in songs:
+            print(song)
+    else:
+        print("No songs found")
