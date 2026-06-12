@@ -13,7 +13,10 @@ class Person:
             raise ValueError("Name cannot be empty")
         self._name = value
 
+  
     @property
-    
+    def email(self):
+        return self._email
+
 
     
