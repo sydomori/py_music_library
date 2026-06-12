@@ -65,4 +65,30 @@ def main():
         "list albums",
         help = "list all albums",
     )
+
+    #user commands
+    subparsers.add_parser(
+        "add user",
+        help = "create a new user",
+    )
+
+    subparsers.add_parser(
+        "list users",
+        help = "list all users",
+    )
     
+    #favorite commands
+    subparsers.add_parser(
+        "add favorite song",
+        help = "add a song to a user's favorites",
+    )
+
+    subparsers.add_parser(
+        "add favorite album",
+        help = "add an album to a user's favorites",
+    )
+
+    subparsers.add_parser(
+        "view favorites",
+        help = "view a user's favorites",
+    )
