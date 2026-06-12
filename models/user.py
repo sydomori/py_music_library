@@ -10,13 +10,24 @@ class User(Person):
         self._favorite_albums = []
         User.all_users.append(self)
 
-     #add favorite songs
-    def add_favorite_song(self,song):
+    # add favorite songs
+    def add_favorite_song(self, song):
         if song in self._favorite_songs:
             print(f"{song.title} is already in {self.name}'s favorite songs.")
-            return #terminate code
+            return
         self._favorite_songs.append(song)
-        print(f"{song.title} added to {self.name}'s favorite songs.")    
+        print(f"{song.title} added to {self.name}'s favorite songs.")
+
+    # remove favorite songs
+    def remove_favorite_song(self, song):
+        if song not in self._favorite_songs:
+            print(f"{song.title} is not in {self.name}'s favorite songs.")
+            return
+        self._favorite_songs.remove(song)
+        print(f"{song.title} removed from {self.name}'s favorite songs.")
+
+
+
 
 
 
