@@ -59,3 +59,11 @@ def create_user():
     new_user = User(name, email)
     new_user.save_to_json()
     print(f'{new_user} created successfully')
+
+    def list_all_users():
+        users = User.read_all()
+        if users:
+            for user in users:
+                print(user)
+        else:
+            print("No users found")
