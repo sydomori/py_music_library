@@ -1,5 +1,5 @@
 import json
-from models.person import Person
+from models2.person import Person
 
 class Artist:
     all = []
