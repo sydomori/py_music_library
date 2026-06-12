@@ -61,6 +61,12 @@ class artist:
                 print(f"- {album.title} ({album.release_year})")
         else:
             print("No albums added.")
+
+
+    @classmethod
+    def find_by_genre(cls,name):
+        return [artist for artist in cls.artists if artist.genre.lower() == name.lower()]
+           
         
 
      
