@@ -52,3 +52,10 @@ def list_all_albums():
             print(album)
     else:
         print("No albums found")
+
+def create_user():
+    name = input("Enter user name: ")
+    email = input("Enter user email: ")
+    new_user = User(name, email)
+    new_user.save_to_json()
+    print(f'{new_user} created successfully')
