@@ -12,3 +12,10 @@ from functions import (
     view_favorites,
     search_by_artist, search_by_genre
 )
+
+#load data
+def load_data():
+    Artist.read_all()
+    Song.read_all()
+    Album.read_all()
+    User.read_all()
