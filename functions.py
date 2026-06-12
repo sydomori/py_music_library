@@ -127,3 +127,13 @@ def search_by_genre():
             print(album)
     else:
         print(f"No albums found with genre '{genre}'")
+
+def view_favorites():
+    user_name = input("Enter user name: ")
+    user = User.find_by_name(user_name)
+    if user:
+        print(f"\nFavorites for {user_name}:")
+        for favorite in user.favorites:
+            print(favorite)
+    else:
+        print(f"User '{user_name}' not found")
