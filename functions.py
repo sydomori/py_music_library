@@ -44,3 +44,11 @@ def create_album():
         print(f"{new_album} created successfully")
     else:
         print("Artist '{artist_name}' not found")
+
+def list_all_albums():
+    albums = Album.read_all()
+    if albums:
+        for album in albums:
+            print(album)
+    else:
+        print("No albums found")
