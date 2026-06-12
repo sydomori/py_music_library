@@ -44,12 +44,15 @@ class Artist:
 
     def save_to_json(self):
         try:
+            print(f"Saving to:{self.FILE_PATH}")
             with open(self.FILE_PATH, 'r') as f:
                 existing_data = json.load(f)
+            print(f'Current data: {existing_data}')
             existing_data.append({
                 "name": self.name,
                 "genre": self.genre
             })
+            print(f'after appending: {existing_data}')
             with open(self.FILE_PATH, 'w') as f:
                 json.dump(existing_data, f)
             print(f'{self} successfully saved')

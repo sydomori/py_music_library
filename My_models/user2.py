@@ -1,7 +1,7 @@
 import json
-from my_models.person import Person
-from my_models.song2 import Song
-from my_models.album2 import Album
+from My_models.person import Person
+from My_models.song2 import Song
+from My_models.album2 import Album
 
 class User(Person):
     all = []

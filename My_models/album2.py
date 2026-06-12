@@ -1,6 +1,6 @@
 import json
-from my_models.artist2 import Artist
-from my_models.song2 import Song
+from My_models.artist2 import Artist
+from My_models.song2 import Song
 
 class Album:
     all = []

@@ -35,61 +35,61 @@ def main():
 
     #artist commands
     subparsers.add_parser(
-        "add artist",
+        "add-artist",
         help = "create a new artist",
     )
 
     subparsers.add_parser(
-        "list artists",
+        "list-artists",
         help = "list all artists",
     )
 
     #song commands
     subparsers.add_parser(
-        "add song",
+        "add-song",
         help = "create a new song",
     )
 
     subparsers.add_parser(
-        "list songs",
+        "list-songs",
         help = "list all songs",
     )
     
     #album commands
     subparsers.add_parser(
-        "add album",
+        "add-album",
         help = "create a new album",
     )
 
     subparsers.add_parser(
-        "list albums",
+        "list-albums",
         help = "list all albums",
     )
 
     #user commands
     subparsers.add_parser(
-        "add user",
+        "add-user",
         help = "create a new user",
     )
 
     subparsers.add_parser(
-        "list users",
+        "list-users",
         help = "list all users",
     )
     
     #favorite commands
     subparsers.add_parser(
-        "add favorite song",
+        "add-favorite-song",
         help = "add a song to a user's favorites",
     )
 
     subparsers.add_parser(
-        "add favorite album",
+        "add-favorite-album",
         help = "add an album to a user's favorites",
     )
 
     subparsers.add_parser(
-        "view favorites",
+        "view-favorites",
         help = "view a user's favorites",
     )
 

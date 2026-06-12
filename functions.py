@@ -7,6 +7,7 @@ def create_artist():
     name = input("Enter artist name: ")
     genre = input("Enter genre: ")
     new_artist = Artist(name, genre)
+    new_artist.save_to_json()
     print(f"{new_artist} created successfully")
 
 def list_all_artists():
