@@ -73,12 +73,10 @@ def add_favorite_song():
     song_title = input("Enter song title: ")
     user = User.find_by_name(user_name)
     song = Song.find_by_title(song_title)
-    if user:
-        song = Song.find_by_title(song_title)
-        if song:
-            user.add_favorite(song)
-            print(f"{song} added to favorites for {user}")
-        else:
-            print(f"Song '{song_title}' not found")
-    else:
-        print(f"User '{user_name}' not found")
+    if user and song:
+        user.add_favorite_song(song)
+        user.save_to_json()
+    elif not user:
+       print(f"User '{user_name}' not found")
+    elif not song:
+       print(f"Song '{song_title}' not found")
