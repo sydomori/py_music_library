@@ -14,6 +14,11 @@ class artist:
     def name(self,value):
      if not value:
         raise ValueError("Name cannot be empty")
+     
+    @property
+    def genre(self):
+        return self._genre
+     
 
 
 
