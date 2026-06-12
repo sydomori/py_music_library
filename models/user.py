@@ -87,8 +87,13 @@ class User(Person):
             "email": self._email,
             "favorite_songs": [song.to_dict() for song in self._favorite_songs],
             "favorite_albums": [album.to_dict() for album in self._favorite_albums]
-        }      
+        } 
 
+
+
+def __str__(self):
+        return f"User: {self._name}, Email: {self._email}"
+            
 
 
             
