@@ -66,6 +66,15 @@ class artist:
     @classmethod
     def find_by_genre(cls,name):
         return [artist for artist in cls.artists if artist.genre.lower() == name.lower()]
+    
+
+    @classmethod
+    def find_by_name(cls,name):
+        for artist in cls.artists:
+            if artist.name.lower() == name.lower():
+                return artist
+        return None
+
            
         
 
