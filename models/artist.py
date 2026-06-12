@@ -82,6 +82,13 @@ class artist:
             "genre": self._genre,
         }
     
+    def __str__(self):
+        return f"{self._name}"
+    
+    
+    
+
+    
 
 
            
