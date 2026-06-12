@@ -32,3 +32,14 @@ def main():
         dest = "command",
         help = "available commands"
     )
+
+    #artist commands
+    subparsers.add_parser(
+        "add artist",
+        help = "create a new artist",
+    )
+
+    subparsers.add_parser(
+        "list artists",
+        help = "list all artists",
+    )
