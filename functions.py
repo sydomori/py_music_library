@@ -93,3 +93,20 @@ def add_favorite_album():
        print(f"User '{user_name}' not found")
     elif not album:
        print(f"Album '{album_title}' not found")
+
+def search_by_artist():
+    artist_name = input("Enter artist name: ")
+    songs = Song.find_by_artist(artist_name)
+    albums = Album.find_by_artist(artist_name)
+    if songs:
+        print(f"\nSongs by {artist_name}:")
+        for song in songs:
+            print(song)
+    else:
+        print(f"No songs found for '{artist_name}'")
+    if albums:
+        print(f"\nAlbums by {artist_name}:")
+        for album in albums:
+            print(album)
+    else:
+        print(f"No albums found for '{artist_name}'")
