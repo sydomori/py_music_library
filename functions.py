@@ -1,7 +1,7 @@
-from My_models.artist2 import Artist
-from My_models.song2 import Song
-from My_models.album2 import Album
-from My_models.user2 import User
+from my_models.artist2 import Artist
+from my_models.song2 import Song
+from my_models.album2 import Album
+from my_models.user2 import User
 
 def create_artist():
     name = input("Enter artist name: ")
