@@ -11,3 +11,16 @@ def list_all_artists():
             print(artist)
     else:
         print("No artists found")
+
+def create_song():
+    title = input("Enter song title: ")
+    genre = input("Enter genre: ")
+    artist_name = input("Enter artist name: ")
+    artist = Artist.find_by_name(artist_name)
+    if artist:
+        new_song = Song(title, genre, artist)
+        new_song.save_to_json()
+        print(f"{new_song} created successfully")
+    else:
+        print("Artist '{artist_name}' not found")
+
