@@ -43,3 +43,15 @@ def main():
         "list artists",
         help = "list all artists",
     )
+
+    #song commands
+    subparsers.add_parser(
+        "add song",
+        help = "create a new song",
+    )
+
+    subparsers.add_parser(
+        "list songs",
+        help = "list all songs",
+    )
+
