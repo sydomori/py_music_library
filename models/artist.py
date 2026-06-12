@@ -45,6 +45,24 @@ class artist:
         else:
             print(f"{album.title} is already in {self.name}'s albums.")
 
+
+    #display
+    def get_discography(self):
+        print(f"\n{self.name}'s Discography:")
+        print("Songs:")
+        if self._songs:
+            for song in self._songs:
+                print(f"- {song.title} from album {song.album.title}")
+        else:
+            print("No songs added.")
+        print("\nAlbums:")
+        if self._albums:
+            for album in self._albums:
+                print(f"- {album.title} ({album.release_year})")
+        else:
+            print("No albums added.")
+        
+
      
     
 
