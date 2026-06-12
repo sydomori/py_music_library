@@ -4,3 +4,10 @@ def create_artist():
     new_artist = Artist(name, genre)
     print(f"{new_artist} created successfully")
 
+def list_all_artists():
+    artists = Artist.read_all()
+    if artists:
+        for artist in artists:
+            print(artist)
+    else:
+        print("No artists found")
