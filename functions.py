@@ -31,3 +31,16 @@ def list_all_songs():
             print(song)
     else:
         print("No songs found")
+
+def create_album():
+    title = input("Enter album title: ")
+    genre = input("Enter genre: ")
+    release_year = int(input("Enter release year: "))
+    artist_name = input("Enter artist name: ")
+    artist = Artist.find_by_name(artist_name)
+    if artist:
+        new_album = Album(title, genre, artist)
+        new_album.save_to_json()
+        print(f"{new_album} created successfully")
+    else:
+        print("Artist '{artist_name}' not found")
