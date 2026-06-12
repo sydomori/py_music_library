@@ -19,3 +19,11 @@ def load_data():
     Song.read_all()
     Album.read_all()
     User.read_all()
+
+def main():
+    load_data()
+
+    parser = argparse.ArgumentParser(
+        prog = "Music Library",
+        description="manage your music from the command line"
+    )
