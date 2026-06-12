@@ -78,7 +78,16 @@ class User(Person):
         for user in cls.all_users:
             if user.name.lower() == name.lower():
                 return user
-        return None        
+        return None 
+
+
+    def to_dict(self):
+        return {
+            "name": self._name,
+            "email": self._email,
+            "favorite_songs": [song.to_dict() for song in self._favorite_songs],
+            "favorite_albums": [album.to_dict() for album in self._favorite_albums]
+        }      
 
 
 
