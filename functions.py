@@ -110,3 +110,20 @@ def search_by_artist():
             print(album)
     else:
         print(f"No albums found for '{artist_name}'")
+
+def search_by_genre():
+    genre = input("Enter genre: ")
+    songs = Song.find_by_genre(genre)
+    albums = Album.find_by_genre(genre)
+    if songs:
+        print(f"\nSongs with genre '{genre}':")
+        for song in songs:
+            print(song)
+    else:
+        print(f"No songs found with genre '{genre}'")
+    if albums:
+        print(f"\nAlbums with genre '{genre}':")
+        for album in albums:
+            print(album)
+    else:
+        print(f"No albums found with genre '{genre}'")
