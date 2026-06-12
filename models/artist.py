@@ -25,6 +25,11 @@ class artist:
             raise ValueError("Genre cannot be empty")
         self._genre = value
 
+    @property
+    def songs(self):
+        return self._songs
+    
+
      
 
 
