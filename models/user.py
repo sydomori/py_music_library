@@ -71,6 +71,19 @@ class User(Person):
         else:
             print("No favorite albums added.")
 
+
+
+    @classmethod
+    def find_by_name(cls,name):
+        for user in cls.all_users:
+            if user.name.lower() == name.lower():
+                return user
+        return None        
+
+
+
+            
+
         
 
 
