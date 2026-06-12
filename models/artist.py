@@ -28,6 +28,13 @@ class artist:
     @property
     def songs(self):
         return self._songs
+     
+    @property
+    def albums(self):
+        return self._albums
+    
+    
+
     
 
      
