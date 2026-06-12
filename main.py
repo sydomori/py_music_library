@@ -92,3 +92,16 @@ def main():
         "view favorites",
         help = "view a user's favorites",
     )
+
+    #search
+    search_parser = subparsers.add_parser(
+        "search",
+        help="Search by artist or genre"
+    )
+    
+    search_parser.add_argument(
+        "--by",
+        choices=["artist", "genre"],
+        required=True,
+        help="Search by artist or genre"
+    )
