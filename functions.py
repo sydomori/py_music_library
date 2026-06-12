@@ -67,3 +67,18 @@ def list_all_users():
             print(user)
     else:
         print("No users found")
+
+def add_favorite_song():
+    user_name = input("Enter user name: ")
+    song_title = input("Enter song title: ")
+    user = User.find_by_name(user_name)
+    song = Song.find_by_title(song_title)
+    if user:
+        song = Song.find_by_title(song_title)
+        if song:
+            user.add_favorite(song)
+            print(f"{song} added to favorites for {user}")
+        else:
+            print(f"Song '{song_title}' not found")
+    else:
+        print(f"User '{user_name}' not found")
