@@ -1,4 +1,4 @@
-from models.artists import Artists
+from models.artist import Artist
 class Album:
     albums=[]
     def __init__(self, title, artist,genre, release_year):
@@ -20,6 +20,10 @@ class Album:
             raise ValueError("Album title cannot be empty")
         self._title = value
 
+    @property
+    def artist(self):
+        return self._artist
+
     @artist.setter
     def artist(self,value):
         if not isinstance(value,Artist):
@@ -39,8 +43,9 @@ class Album:
     @property
     def genre(self):
         return self._genre
+    
     @genre.setter
-    def genre(self.value):
+    def genre(self,value):
         if not value:
             raise ValueError("Album genre cannot be empty")
         self._genre =value
