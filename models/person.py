@@ -23,6 +23,10 @@ class Person:
         if not "@" in value:
             raise ValueError("Invalid email address")
         self._email = value
+
+    def __str__(self):
+        return f"Name: {self.name}, Email: {self.email}"
+        
     
 
 
