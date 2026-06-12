@@ -30,6 +30,15 @@ class User(Person):
     @property
     def favorite_songs(self):
         return self._favorite_songs
+    
+#add favorite albums
+    def add_favorite_album(self,album):
+        if album in self._favorite_albums:
+            print(f"{album.title} is already in {self.name}'s favorite albums.")
+            return
+        self._favorite_albums.append(album)
+        print(f"{album.title} added to {self.name}'s favorite albums.")
+
        
 
 
