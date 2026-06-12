@@ -27,6 +27,12 @@ class User(Person):
         print(f"{song.title} removed from {self.name}'s favorite songs.")
 
 
+    @property
+    def favorite_songs(self):
+        return self._favorite_songs
+       
+
+
 
 
 
